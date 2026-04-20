@@ -1,0 +1,240 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  border: none;
+  background: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+body {
+  font-family: "Pretendard", "Apple SD Gothic Neo", sans-serif;
+  background: #050505;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+#wrap {
+  width: 100%;
+  overflow: hidden;
+}
+
+.inner {
+  width: min(1100px, 90%);
+  margin: 0 auto;
+}
+
+/* hero */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 760px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.65)),
+    rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.hero-top-text {
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: -0.02em;
+}
+
+.hero-btn {
+  position: absolute;
+  top: 20px;
+  right: 28px;
+  z-index: 3;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba(127, 59, 86, 0.95);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: rgba(151, 71, 102, 1);
+  transform: translateY(-2px);
+}
+
+.hero-center-box {
+  position: relative;
+  z-index: 3;
+  width: min(500px, 86%);
+  min-height: 200px;
+  background: rgba(255, 255, 255, 0.97);
+  color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 28px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.hero-center-box p {
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+
+/* section */
+.campaign-section {
+  background: #080808;
+  padding: 110px 0 140px;
+}
+
+.campaign-desc {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 16px;
+  line-height: 2;
+  margin-bottom: 60px;
+}
+
+.campaign-desc span {
+  color: #cf2237;
+  font-weight: 700;
+}
+
+.campaign-image-box {
+  width: min(820px, 100%);
+  margin: 0 auto;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.42);
+}
+
+.campaign-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.campaign-title {
+  margin-top: 70px;
+  text-align: center;
+  font-size: 34px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.campaign-title span {
+  color: #d6122d;
+}
+
+.check-btn {
+  display: block;
+  margin: 34px auto 0;
+  min-width: 170px;
+  padding: 14px 24px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #6f2d47, #8a3e5c);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.check-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+/* modal */
+.video-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+
+.video-modal.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.video-modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.82);
+}
+
+.video-modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(960px, 90%);
+  transform: translate(-50%, -50%);
+  background: #111;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+.video-modal-content video {
+  width: 100%;
+  max-height: 80vh;
+  background: #000;
+}
+
+.video-close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  z-index: 10;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.video-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
