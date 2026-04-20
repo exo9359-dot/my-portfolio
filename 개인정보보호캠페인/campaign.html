@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>개인정보보호캠페인</title>
+  <link rel="stylesheet" href="./campaign.css" />
+</head>
+<body>
+  <div id="wrap">
+    <!-- 상단 비주얼 -->
+    <section class="hero">
+      <video class="hero-video" autoplay muted loop playsinline>
+        <source src="./video/main-bg.mp4" type="video/mp4" />
+        브라우저가 video 태그를 지원하지 않습니다.
+      </video>
+
+      <div class="hero-overlay"></div>
+
+      <p class="hero-top-text">개인정보보호캠페인</p>
+
+      <button class="hero-btn open-video" data-video="./video/intro.mp4">
+        영상보러가기
+      </button>
+    </section>
+
+    <!-- 본문 -->
+    <section class="campaign-section">
+      <div class="inner">
+        <p class="campaign-desc">
+          우리는 매일 많은 사람과, 예기치 못한 관계 속에서 사연을 공유합니다.<br />
+          그 모든 순간은 누군가에게 <span>흔적</span>가 됩니다.
+        </p>
+
+        <div class="campaign-image-box">
+          <img src="./img/night-street.png" alt="어두운 골목길 장면" />
+        </div>
+
+        <h2 class="campaign-title">
+          당신은 이미 <span>노출</span>되었습니다
+        </h2>
+
+        <button class="check-btn open-video" data-video="./video/intro.mp4">
+          지금확인하기
+        </button>
+      </div>
+    </section>
+
+    <!-- 영상 모달 -->
+    <div class="video-modal" id="videoModal">
+      <div class="video-modal-overlay"></div>
+
+      <div class="video-modal-content">
+        <button class="video-close" id="videoClose" aria-label="닫기">×</button>
+
+        <video id="modalVideo" controls playsinline>
+          <source src="" type="video/mp4" />
+          브라우저가 video 태그를 지원하지 않습니다.
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <script src="./campaign.js"></script>
+</body>
+</html>
